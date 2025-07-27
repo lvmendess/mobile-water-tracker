@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +17,10 @@ public class BotaoAdapter extends RecyclerView.Adapter<BotaoAdapter.BotaoViewHol
     private int itemCount;
     private OnItemClickListener listener;
     private boolean[] state;
+
+    public boolean isClicked(int i) {
+        return state[i];
+    }
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -68,7 +73,7 @@ public class BotaoAdapter extends RecyclerView.Adapter<BotaoAdapter.BotaoViewHol
     }
 
     class BotaoViewHolder extends RecyclerView.ViewHolder {
-        Button button;
+        ImageButton button;
 
         BotaoViewHolder(View itemView) {
             super(itemView);
