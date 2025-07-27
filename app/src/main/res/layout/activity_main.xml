@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#232529"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="#072e6b">
+
+        <EditText
+            android:id="@+id/peso"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textAlignment="textEnd"
+            android:hint="digite seu peso em kg"
+            android:textColorHint="#9b9c9e"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:text="Kg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+        />
+
+        <Button
+            android:id="@+id/calcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calcular"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#1054c2"
+        />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#072e6b"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/div1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bebeu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bebeu: "
+                android:textSize="25sp"
+                android:textColor="@color/white"
+            />
+            <TextView
+                android:id="@+id/quantBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/div2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/falta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Falta: "
+                android:textSize="25sp"
+                android:textColor="@color/white"
+            />
+            <TextView
+                android:id="@+id/quantFalta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            android:textColor="@color/white"
+            android:backgroundTint="#1054c2"
+        />
+    </LinearLayout>
+</RelativeLayout>
